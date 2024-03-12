@@ -5,7 +5,8 @@ import { ref } from "vue";
 </script>
 
 <template>
-  <div class="bg-white w-4/5 m-auto h-screen my-16 rounded-2xl shadow-xl">
+  <div class="bg-white w-11/12 m-auto h-auto min-h-screen my-16 rounded-2xl shadow-xl">
+    
     <Head/>
     <router-view/>
   </div>

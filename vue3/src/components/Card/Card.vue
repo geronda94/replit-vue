@@ -2,11 +2,21 @@
 <script setup>
     let props = defineProps({
         id: Number,
-        img: String,
+        img: {
+          type: String,
+          default: "/sneakers/sneakers-1.jpg"
+        },
         title: String,
         price: Number,
-        isFavorite: Boolean,
-        isAdded: Boolean,
+        isFavorite: {
+          type: Boolean,
+          default: false
+        },
+        isAdded: {
+          type: Boolean,
+          default: false
+        },
+
         onClickAdd: Function,
         onClickFavorite: Function
 })
@@ -15,7 +25,7 @@
 <template>
   <div class="sneakers__card">
     <div
-      class="relative m-4 border border-slate-100 rounded-2xl py-6 px-8 cursor-pointer hover:-translate-y-2 hover:shadow-xl transition bg-white"
+      class="relative border border-slate-100 rounded-2xl py-6 px-8 cursor-pointer hover:-translate-y-2 hover:shadow-xl transition bg-white"
     >
       <img
         @click="onClickFavorite"
